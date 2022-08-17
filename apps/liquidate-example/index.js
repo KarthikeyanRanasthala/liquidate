@@ -1,3 +1,3 @@
-const { greet } = require("liquidate");
+const { startServer } = require("liquidate");
 
-greet();
+startServer({});
