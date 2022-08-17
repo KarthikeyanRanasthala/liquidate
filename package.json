@@ -1,0 +1,11 @@
+{
+  "name": "liquidate-root",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {},
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ]
+}
