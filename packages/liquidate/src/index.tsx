@@ -1,5 +1,6 @@
 import express from "express";
 import { renderToString } from "solid-js/web";
+import importCwd from "import-cwd";
 
 export interface EntryConfig {
   routes: Record<
@@ -10,8 +11,10 @@ export interface EntryConfig {
   >;
 }
 
-export const startServer = (entryConfig: EntryConfig) => {
+export const startServer = () => {
   const app = express();
+
+  const entryConfig = importCwd("./dist/entry.js") as EntryConfig;
 
   const { routes } = entryConfig;
 

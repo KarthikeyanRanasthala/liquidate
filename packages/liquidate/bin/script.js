@@ -66,4 +66,24 @@ const validateEntryPoint = () => {
   build(`./${entryFile}`);
 };
 
-validateEntryPoint();
+const start = () => {
+  const { startServer } = require("liquidate");
+
+  startServer();
+};
+
+const argv = process.argv.slice(2);
+
+switch (argv[0]) {
+  case "build":
+    validateEntryPoint();
+    break;
+
+  case "start":
+    start();
+    break;
+
+  default:
+    console.error("Wrong argument");
+    process.exit(1);
+}

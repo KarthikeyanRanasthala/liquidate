@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node index.js",
-    "build": "liquidate"
+    "start": "liquidate start",
+    "build": "liquidate build"
   },
   "license": "MIT"
 }
